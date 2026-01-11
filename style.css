@@ -1,0 +1,599 @@
+body {
+        margin: 0px;
+        padding: 1vw;
+        background-color: #000a20;
+        height: auto;
+      }
+      #header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1vh 2vw;
+      }
+      #heading {
+        color: #d6e2ff;
+        font-size: 14vh;
+        font-family: "Inter", sans-serif;
+        margin-left: 37vw;
+        margin-right: 20.6vw;
+        margin-top: 0.5vh;
+        margin-bottom: 1.2vh;
+        display: none;
+        text-shadow: 0 0 1vh #d6e2ff, 0 0 2vh #000f3b, 0 0 3vh #000d34,
+          0 0 4vh #000a20, 0 0 5vh #000a20, 0 0 6vh #000a20, 0 0 7vh #000a20,
+          0 0 8vh #000a20, 0 0 9vh #000a20, 0 0 10vh #000a20;
+      }
+
+      .light-mode #heading {
+        color: #ff6200;
+        text-shadow: 0 0 1vh #ffe28a, 0 0 2vh #ffe9a8, 0 0 3vh #fff1c8,
+          0 0 4vh #fff5d7, 0 0 5vh #fffbef, 0 0 6vh #ffe28a, 0 0 7vh #ffe9a8,
+          0 0 8vh #fff1c8, 0 0 9vh #fff5d7, 0 0 10vh #fffbef;
+      }
+
+      a {
+        color: #000a20;
+        text-decoration: none;
+        font-size: 3.2vh;
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 10vw; /* Adjust as needed */
+      }
+
+      a:hover {
+        color: #000000;
+        text-decoration: underline;
+        text-shadow: 0 0 0.5vh #d6e2ff;
+      }
+
+      a:active {
+        color: #a7b5fa;
+        text-decoration: underline;
+      }
+
+      ul {
+        list-style: none; /* it means no bullets */
+        padding: 2.5vh 2vw; /* ✅ key fix */
+        padding-bottom: 1vh;
+        margin-top: 5vh;
+        margin-bottom: 1vh;
+        display: flex; /* it means the list items will be displayed in a row */
+        flex-direction: row; /* it means the list items will be displayed in a row */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5vw;
+        box-sizing: border-box;
+      }
+
+      li {
+        width: 200px; /* ✅ key fix */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1vh;
+        font-size: 3vh;
+        border-radius: 10%;
+        background: #a7b5fa;
+        padding: 2vh 2vw;
+        box-sizing: border-box;
+        text-align: center;
+        transition: background 0.3s;
+        margin: 1vh 1vw;
+        height: 28.5vh;
+        margin-top: 0vh;
+      }
+
+      li:hover {
+        box-shadow: 0 0 1vh #000000, 0 0 1.5vh #dae4fc, 0 0 2vh #a7b5fa,
+          0 0 2.5vh #000a20;
+        transition: box-shadow 0.3s ease-in-out;
+      }
+
+      .dropdown {
+        position: relative;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background: #a7b5fa;
+        min-width: 120px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        border-radius: 5px;
+      }
+      .dropdown-content button {
+        width: 100%;
+        background: none;
+        border: none;
+        padding: 10px;
+        text-align: left;
+        cursor: pointer;
+      }
+      .dropdown-content button:hover {
+        background: #a7b5fa;
+      }
+      .dropdown-content.show {
+        display: block;
+      }
+      .dropdown button {
+        background: #d6e2ff;
+        color: #000000;
+        border: solid 1px #000000;
+        border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
+      }
+      #AddBookmark {
+        display: none;
+      }
+      input {
+        padding: 1vh;
+        font-size: 2vh;
+        margin: 0vh 2vw;
+        margin-top: 2vh;
+        margin-right: 2vw;
+      }
+      img {
+        width: 5vw;
+        height: 10vh;
+        border-radius: 50%;
+      }
+      input {
+        background: #d6e2ff;
+        box-shadow: 0 0 5px #000000;
+      }
+      input::placeholder {
+        color: #000a20;
+      }
+      input:focus {
+        background: #a7b5fa;
+      }
+
+      .light-mode {
+        background: #fff7e0;
+      }
+
+      .light-mode ul {
+        background: #fff7e0;
+      }
+
+      .light-mode li {
+        background: linear-gradient(
+          #fff7e0,
+          #fff7e0,
+          #fff7e3,
+          #fff6dc,
+          #fef2cd,
+          #fff0c3,
+          #ffebad,
+          #ffe79f,
+          #ffdf7e,
+          #ffd968,
+          #ffcf41,
+          #ffbb00,
+          #ff9d00
+        );
+      }
+
+      .light-mode li:hover {
+        box-shadow: 0 0 1vh #000000, 0 0 1.5vh #ffd968, 0 0 2vh #ffe79f,
+          0 0 2.5vh #fff7e0;
+        transition: box-shadow 0.3s ease-in-out;
+      }
+
+      .light-mode input {
+        background-color: #3c3c3c;
+        color: #ffffff;
+      }
+
+      .light-mode input:focus {
+        background-color: rgb(117, 117, 117);
+      }
+
+      .light-mode input {
+        box-shadow: 0 0 5px #000000;
+      }
+
+      .light-mode input::placeholder {
+        color: #fff7e0;
+      }
+
+      .light-mode a {
+        color: #000000;
+      }
+
+      .light-mode a:hover {
+        color: #0026ff;
+        text-decoration: underline;
+      }
+
+      .light-mode a:active {
+        color: #ffffff;
+        text-decoration: underline;
+      }
+      .light-mode .dropdown-content {
+        background: #fff7e0;
+      }
+      .light-mode .dropdown button {
+        background: linear-gradient(
+          #fef2cd,
+          #fff0c3,
+          #ffebad,
+          #ffe79f,
+          #ffdf7e,
+          #ffd968,
+          #ffcf41,
+          #ffbb00,
+          #ff9d00
+        );
+        color: #000000;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+      }
+      .light-mode .heading {
+        font-family: "Merriweather", serif;
+      }
+      #bookmarkName {
+        margin-left: 26vw;
+      }
+      #ImportData {
+        text-align: center;
+        margin-top: 28vh;
+        color: #d6e2ff;
+        font-size: 20vh;
+        margin-bottom: 20vh;
+font-family: "Inter", sans-serif;
+text-shadow: 0 0 1vh #d6e2ff, 0 0 2vh #000f3b, 0 0 3vh #000d34,
+          0 0 4vh #000a20, 0 0 5vh #000a20, 0 0 6vh #000a20, 0 0 7vh #000a20,
+          0 0 8vh #000a20, 0 0 9vh #000a20, 0 0 10vh #000a20;
+      }
+      .light-mode #ImportData {
+        color: #ff6200;
+text-shadow: 0 0 1vh #ffe28a, 0 0 2vh #ffe9a8, 0 0 3vh #fff1c8,
+          0 0 4vh #fff5d7, 0 0 5vh #fffbef, 0 0 6vh #ffe28a, 0 0 7vh #ffe9a8,
+          0 0 8vh #fff1c8, 0 0 9vh #fff5d7, 0 0 10vh #fffbef;
+      }
+      #button1 {
+        font-size: 4vh;
+        margin-right: 4vw;
+        padding: 0.5vh 1vw;
+      }
+      #button2 {
+        font-size: 4vh;
+        padding: 0.5vh 1vw;
+      }
+      #button1:hover,
+      #button2:hover {
+        cursor: pointer;
+        filter: brightness(0.85);
+        transform: scale(1.05);
+      }
+      #brandlogoasbutton {
+        position: fixed;
+        top: 2vh;
+        left: 1vw;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 9999;
+      }
+      #brandLogo {
+        position: fixed;
+        top: 2.5vh;
+        left: 1.18vw;
+        width: 4vw;
+        height: 8vh;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 0 4px #000000, 0 0 6px #ffffff, 0 0 6.5px #ffffff,
+          0 0 7px #000a20, 0 0 8px #000a20;
+        display: block;
+      }
+      .light-mode #brandLogo {
+        box-shadow: 0 0 4px #ffffff, 0 0 6px #000000, 0 0 6.5px #000000,
+          0 0 7px #fff7e0, 0 0 8px #fff7e0;
+      }
+      #brandLogo:hover {
+        cursor: pointer;
+        filter: brightness(1.2);
+        transform: scale(1.05);
+      }
+      #password {
+        top: 30vh;
+      }
+      #reset {
+        top: 24vh;
+      }
+      #ExportData {
+        top: 18vh;
+      }
+      #themeToggle {
+        top: 12vh;
+      }
+      .buttonclass {
+        position: fixed;
+        font-size: 3vh;
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: #ffffff;
+        transition: transform 0.4s;
+        display: none;
+        left: 1vw;
+        width: 4vw;
+        height: 7vh;
+        z-index: 9999;
+      }
+      .buttonclass:hover {
+        transform: scale(1.05);
+      }
+
+      li {
+        position: relative;
+      }
+
+      .green-signal-button {
+        position: absolute;
+        top: 22vh;
+        right: 0.2vw;
+        background: none;
+        border: none;
+        font-size: 4vh;
+        cursor: pointer;
+        z-index: 10;
+        transition: transform 0.2s ease;
+      }
+
+      .green-signal-button:hover {
+        transform: scale(1.05);
+      }
+
+      .green-signal-button.unmarked {
+        color: #999; /* gray for ⚪ state */
+        filter: brightness(150%);
+        font-size: 3.5vh;
+      }
+      .edit-button {
+        display: inline;
+        font-size: 2vh;
+        cursor: pointer;
+        background: none;
+        border: none;
+      }
+      .button-row {
+	padding-top: 1.35vh;
+        display: flex;
+        justify-content: center;
+        gap: 1vw;
+      }
+      .edit-input {
+        height: 1vh;
+      }
+      #pagesPanel {
+        position: fixed;
+        top: 0;
+        right: -97.6vw; /* Hidden initially */
+        width: 98.4vw;
+        height: 100%;
+        background-color: #fff7e0;
+        border-left: 0.75vw solid #9148ff;
+        transition: right 0.3s ease;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        margin-right: 0vw;
+        margin-bottom: 0vh;
+      }
+
+      #pagesHeader {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        padding: 10px;
+        color: #9148ff;
+        background: #0f1111;
+        font-size: 4vh;
+        padding: 1vh 2vw;
+        border-bottom: 1px solid #000000;
+        width: 98.4vw;
+        z-index: 9999;
+      }
+
+      #pagesFooter {
+        display: flex;
+        padding: 1vh 2vw;
+        height: 0.8vh;
+        padding-bottom: 1.6vh;
+        z-index: 9999;
+        background: #0f1111;
+        transition: background 1s ease;
+      }
+
+      #pagesArea {
+        width: 98.4vw;
+        border: none;
+        padding: 10px;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        font-size: 2vh;
+        background: #9148ff20;
+        resize: none;
+        height: 85.4vh;
+      }
+
+      #openpagesButton {
+        position: fixed;
+        top: 50%;
+        right: 0vw;
+        transform: translateY(-50%);
+        padding: 0px;
+        cursor: pointer;
+        z-index: 9999;
+        background: none;
+        border: none;
+        font-size: 3vh;
+      }
+
+      #expandpagesButton,
+      #shrinkpagesButton {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 0px;
+        cursor: pointer;
+        z-index: 9999;
+        background: none;
+        font-size: 4vh;
+        border: none;
+      }
+      #expandpagesButton {
+        right: 0.55vw;
+      }
+      #shrinkpagesButton {
+        right: 98.2vw;
+        display: none; /* Initially hidden */
+      }
+      #Newpage,
+      #Savepage,
+      #Openpage,
+      #CaptureScreenshot,
+      #Deletepage,
+      #showVideoBtn,
+      #PenTool,
+      #CleanTool,
+      #PenColorPicker,
+      #AIAssistant {
+        background: none;
+        border: none;
+        font-size: 2.5vh;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+        margin-right: 1.5vw;
+      }
+      #CaptureScreenshot{
+        font-size: 3vh;
+        padding-bottom: 1vh;
+      }
+      #Newpage {
+        margin-left: 2vw;
+      }
+      #ShowpageName {
+        font-size: 2.5vh;
+        color: #e1cffc;
+        /* now we will put the text in the centre of the pages header */
+        margin-left: 10vw;
+        flex: 0.5; /* This allows it to take up remaining space */
+        margin-right: 1vw;
+      }
+      #Newpage:hover,
+      #Savepage:hover,
+      #Openpage:hover,
+      #CaptureScreenshot:hover,
+      #Deletepage:hover,
+      #showVideoBtn:hover,
+      #PenTool:hover,
+      #CleanTool:hover,
+      #PenColorPicker:hover {
+        transform: scale(1.05);
+      }
+      #AIAssistant {
+        font-size: 4vh;
+      }
+      #AIAssistant:hover {
+        transform: scale(1.20);
+      }
+      #PenTool {
+        margin-left: 20vw;
+        margin-right: 0vw;
+      }
+      #prevpage,
+      #nextpage {
+        font-size: 2vh;
+        cursor: pointer;
+        margin-left: 0vw;
+        padding: 0.8vh 1.6vw;
+        border: none;
+        border-right: 0.1vw solid #000000;
+      }
+      #prevpage {
+        padding-left: 0vw;
+      }
+      #nextpage {
+        padding-right: 0vw;
+      }
+      #commandOutput {
+        padding-bottom: 1vh;
+        margin-top: 0vh;
+        padding-top: 0vh;
+        padding-left: 0vw;
+        margin-left: 0vw;
+        margin-bottom: 0vh;
+        z-index: 9999;
+        white-space: nowrap;
+        font-family: monospace;
+      }
+      #commandInput {
+        color: #000000;
+        padding: 1vh;
+        width: 80vw;
+        font-size: 2vh;
+        background: linear-gradient(135deg, #7b00ff, #3780ff, #00ffe0);
+        margin-bottom: 0.1vh;
+        margin-left: 0vw;
+        margin-top: 0vh;
+      }
+      #commandInput::placeholder {
+        color: #000000;
+      }
+      #argInput::placeholder {
+        color: #000000;
+      }
+      #commandContainer {
+        position: absolute;
+        bottom: 3.4vh;
+        z-index: 9999;
+        display: none;
+        margin-left: 0vw;
+      }
+      #showVideoBtn,
+      #youtubeanimation {
+        font-size: 1.8vh;
+        color: #ffffff;
+        background: #ff0033;
+        padding: 0.3vh 0.6vw;
+        border-radius: 15%;
+      }
+      @keyframes royalBrandIntro {
+        0% {
+          transform: scale(0.8);
+          opacity: 0;
+          filter: brightness(1);
+          text-shadow: none;
+        }
+        30% {
+          transform: scale(1.05);
+          opacity: 1;
+          filter: brightness(1.2);
+          text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+        }
+        70% {
+          transform: scale(1);
+          opacity: 1;
+          filter: brightness(1);
+          text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+        }
+        100% {
+          transform: scale(1);
+          opacity: 0;
+          filter: brightness(1);
+          text-shadow: none;
+        }
+      }
+
+      #youtubeanimation.animate,#notebooklogo.animate {
+        animation: royalBrandIntro 0.8s ease-out forwards;
+      }

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyBook</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <button id="brandlogoasbutton" onclick="buttonshower()">
+      <img
+        id="brandLogo"
+        src="data:image/jpeg;base64,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"
+        alt="Brand Logo"
+      />
+    </button>
+    <div id="importPrompt" style="text-align: center; margin-top: 10vh">
+<h2 id="ImportData"
+      ><bold>𝗠</bold>y<bold><italic>𝘉</italic></bold
+      >ook</h2
+    >
+
+      <button id="button1" onclick="triggerImport()">📥 Import Data</button>
+      <button id="button2" onclick="skipImport()">🚫 Don't Import</button>
+      <input type="file" id="importFile" accept=".json" style="display: none" />
+    </div>
+
+    <!-- div is a block element but span is an inline element -->
+    <button id="password" class="buttonclass" onclick="changePagePassword()">
+      🔒
+    </button>
+    <button id="reset" class="buttonclass" onclick="resetWebsite()">♻️</button>
+    <button id="themeToggle" class="buttonclass">🌞</button>
+    <button onclick="exportData()" id="ExportData" class="buttonclass">
+      📤
+    </button>
+    <span id="heading"
+      ><bold>𝗠</bold>y<bold><italic>𝘉</italic></bold
+      >ook</span
+    >
+
+    <form id="bookmarkForm">
+      <input
+        type="text"
+        id="bookmarkName"
+        placeholder="Enter Bookmark Name"
+        required
+      />
+      <input
+        type="text"
+        id="bookmarkURL"
+        placeholder="Enter Bookmark URL"
+        required
+      />
+      <input
+        type="text"
+        id="bookmarkImageURL"
+        placeholder="Enter Image URL (optional)"
+      />
+      <button type="submit" id="AddBookmark">Add Bookmark</button>
+    </form>
+
+    <ul id="bookmarkList"></ul>
+
+    <button 
+  title = "MyBook Community Board"
+  onclick="window.open('https://excalidraw.com/#room=250a823e1add5a953a29,4jHuP5MYID6mm3D23RIy6A', '_blank')" 
+  style="
+    position: fixed;
+    top: 12px;
+    right: 34px;
+    background: radial-gradient(circle, rgba(255,255,255,0.3), rgba(0,0,0,0)); /* subtle light */
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1000;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px rgba(255,255,255,0.4); /* natural glow */
+    transition: transform 0.3s;
+    overflow: hidden;
+  "
+>
+  <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWd4d2JtMXF2YmhjaW1jdWNsNG5zeWZhNjZ3c2VnM3R5dXI0d3M5dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/X6hiFJjvTDAAw/giphy.gif" 
+       style="width:85px; animation: spin 20s linear infinite; border-radius:50%; box-shadow: 0 0 15px rgba(255,255,255,0.4);">
+</button>
+
+<div
+      id="whiteOverlay"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: white;
+        z-index: 99999;
+        display: none;
+      "
+    >
+      <div
+        id="youtubeanimation"
+        style="
+          margin-top: 43.5vh;
+          margin-left: 46vw;
+          width: 3vw;
+          font-size: 8vh;
+          padding: 1vh 2.8vw;
+        "
+      >
+        ▶
+      </div>
+    </div>
+
+    <div
+      id="notebookOverlay"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #000000;
+        z-index: 99999;
+        display: none;
+      "
+    >
+      <div
+      id="notebooklogo"
+        style="
+          margin-top: 36vh;
+          margin-left: 34vw;
+          width: 40vw;
+          font-size: 16vh;
+          padding: 1vh 2.8vw;
+          color: #9148ff;
+          font-weight: 500;
+	 padding: 0vh;
+          margin-bottom: 0vh;
+        "
+      >
+        <bold>𝗡</bold>ote<bold><italic>𝘉</italic></bold
+      >ook<br>
+        <div style="font-size: 4vh; margin-left: 10vw; color: #9148ff60">(Focus matters)</div><br><br>
+        <div style="font-size: 3vh; margin-left: 52vw; top: 90vh; margin-bottom: 2vh; width: 20vw; color: #9148ff">by <bold>𝗠</bold>y<bold><italic>𝘉</italic></bold
+      >ook · © 2025</div>
+      </div>
+    </div>
+
+    <!-- pages Panel -->
+    <div id="pagesPanel">
+      <div id="pagesHeader">
+        <bold>𝗡</bold>ote<bold><italic>𝘉</italic></bold
+      >ook
+        <button
+          id="Newpage"
+          title="Create a new temp page, outside the NoteBook"
+        >
+          ➕
+        </button>
+        <button id="Savepage" title="Save page in NoteBook">💾</button>
+        <button id="Openpage" title="Open page from NoteBook">📂</button>
+        <button
+          id="CaptureScreenshot"
+          title="Capture Screenshot (only drawings)"
+        >
+          📷
+        </button>
+        <button id="Deletepage" title="Delete page">🗑️</button>
+        <button id="showVideoBtn" title="Youtube Embed Player"
+>▶</button>
+        <span id="ShowpageName"></span>
+        <button id="prevpage" title="previouspage" style="display: none">
+          ◀️
+        </button>
+        <button id="nextpage" title="nextpage" style="display: none">▶️</button>
+        <button
+          id="PenTool"
+          style="padding-right: 0vw; padding-top: 0vh; margin-top: 0vh"
+        >
+          ✏️
+        </button>
+        <input
+          type="color"
+          id="PenColorPicker"
+          value="#000000"
+          title="Pick Pen Color"
+          style="
+            margin-left: 0vw;
+            margin-bottom: 0vh;
+            padding-left: 0vw;
+            padding-bottom: 0vh;
+            width: 1.5vw;
+            height: 3vh;
+            border-radius: 100%;
+          "
+        />
+        <button id="CleanTool" title="Clean drawings">🧹</button>
+        <button
+          id="AIAssistant"
+          title="AI Assistant"
+          onclick="toggleCommandInput()"
+        >
+          🤖
+        </button>
+      </div>
+      <canvas
+        id="pagesCanvas"
+        style="
+          position: fixed;
+          top: 7.46vh;
+          right: 0;
+          width: 98.4vw;
+          height: 89.1vh;
+          pointer-events: none;
+          z-index: 9998;
+        "
+      >
+    </canvas>
+      <iframe
+        id="YoutubeVideo"
+        style="
+          display: none;
+          border: 10vh solid #000000;
+          border-top: 7.5vh solid #000000;
+          border-left: 8vh solid #000000;
+        "
+        width="1400"
+        height="700"
+        src="https://www.youtube.com/embed/WW-W4Eu5nvM?si=-t3VSeLK-nWQkfWg"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+      <div
+        id="pagesArea"
+        placeholder="Write your pages here..."
+        contenteditable="true"
+      ></div>
+      <div id="commandContainer">
+        <div id="helpPanel" style="margin-top: 1vh">
+          <div id="commandsList" style="margin-top: 0.1vh"></div>
+          <input
+            id="argInput"
+            type="text"
+            placeholder="Enter {arg}"
+            style="
+              margin: 0 0;
+              padding: 0.5vh;
+              width: 80vw;
+              background: linear-gradient(135deg, #7b00ff, #3780ff, #00ffe0);
+              color: #000000;
+              display: none;
+            "
+          />
+        </div>
+
+        <input
+          id="commandInput"
+          type="text"
+          placeholder="Enter command"
+          onkeydown="if (event.key === 'Enter') runCommand()"
+        />
+        <button
+          onclick="helpfunction()"
+          style="background: #7b00ff; color: #ffffff"
+        >
+          Help
+        </button>
+      </div>
+      <div id="pagesFooter">
+         <div id="copyright" style="color: #9148ff; padding-left: 85vw">by <bold>𝗠</bold>y<bold><italic>𝘉</italic></bold
+      >ook · © 2025</div>
+        <pre id="commandOutput"></pre>
+      </div>
+    </div>
+
+    <!-- Expand pages Button -->
+    <button id="expandpagesButton">👈</button>
+
+    <!-- Shrink pages Button -->
+    <button id="shrinkpagesButton" style="display: none">👉</button>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
